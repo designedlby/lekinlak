@@ -33,10 +33,6 @@ const productsData = {
   ]
 };
 
-function shortenLink(link) {
-  return `https://ouo.io/${ouoToken}/?s=${encodeURIComponent(link)}`;
-}
-
 function loadCategory(category) {
   const container = document.getElementById("products");
   container.innerHTML = "";
@@ -47,7 +43,7 @@ function loadCategory(category) {
       <img src="${product.img}" alt="${product.name}" />
       <h3>${product.name}</h3>
       <p>السعر: ${product.price} جنيه</p>
-      <a href="${shortenLink(product.link)}" target="_blank">اشترِ الآن</a>
+      <a href="${product.link}" target="_blank">اشترِ الآن</a>
     `;
     container.appendChild(div);
   });
@@ -67,7 +63,7 @@ function searchProducts(keyword) {
           <img src="${product.img}" alt="${product.name}" />
           <h3>${product.name}</h3>
           <p>السعر: ${product.price} جنيه</p>
-          <a href="${shortenLink(product.link)}" target="_blank">اشترِ الآن</a>
+          <a href="${product.link}" target="_blank">اشترِ الآن</a>
         `;
         container.appendChild(div);
       });
