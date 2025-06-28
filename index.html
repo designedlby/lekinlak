@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لقينالك - مقارنة أسعار</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🔍 لقينالك – مقارنة أسعار من جوميا، نون، أمازون</h1>
+  <div id="tabs">
+    <button onclick="loadCategory('mobiles')">📱 موبايلات</button>
+    <button onclick="loadCategory('laptops')">💻 لابتوبات</button>
+    <button onclick="loadCategory('tvs')">📺 شاشات</button>
+  </div>
+
+  <input type="text" id="search" placeholder="ابحث هنا..." oninput="searchProducts(this.value)" />
+
+  <div id="products"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
